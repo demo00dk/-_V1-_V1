@@ -26,7 +26,6 @@
 
 > **注**：演示库里有 261 所学校（前端展示 87 所）。数据仅为历史快照，真正申请时一定要去官网核对最新简章。顾问入口目前也是演示用的，不接收真实咨询。详见[资料说明](data/README.md)。
 
-
 ### 🛠️ 技术踩坑与架构说明
 
 前端用的 React + TypeScript + Vite，后端是 Node.js。为了轻量化，V1 没上数据库，直接用 JSON 文件做数据存储。Excel 解析库做了按需加载，支持了市面上常见的大部分表格格式（XLSX, CSV, ODS 等）。
@@ -59,7 +58,6 @@ npm run test:ui
 
 总结：目前是本机测试跑通的 demo 版本，不能直接商用。
 
-
 ![院校查询](docs/screenshots/schools.png)
 
 ## English
@@ -83,7 +81,6 @@ Right now, the priority is to nail the core workflow for Chinese-speaking users.
 - ⚙️ **Admin CMS**: Batch toggle school visibility, manage majors, import/export via Excel, and edit matching rules and page content dynamically.
 
 > **Note**: The demo includes 261 schools (87 visible on the frontend). The data is a historical snapshot—always check the official university guidelines before applying. The "Consultant" feature is just a UI demo. See [Data Readme](data/README.md) for details.
-
 
 ### 🛠️ Architecture & Dev Notes
 
@@ -113,7 +110,6 @@ Running `npm run verify` checks formatting and runs coverage, build, and browser
 - The matching rules are a bit rigid right now and don't account for every quirky requirement some schools have.
 - Image sharing needs more real-world testing on mobile devices and WeChat browsers.
 - Password recovery, audit logs, and payments are out of scope for V1.
-
 
 ## 한국어
 
