@@ -1,0 +1,68 @@
+:root {
+  --paper: #f5f2e9;
+  --white: #fffdf8;
+  --ink: #17312d;
+  --ink-soft: #4b615a;
+  --blue: #2f6b6c;
+  --blue-dark: #1b3b36;
+  --sky: #d7e6d8;
+  --sky-2: #edf3ea;
+  --red: #d85e46;
+  --red-soft: #f9e8de;
+  --gold: #b99a55;
+  --line: #d9ddd1;
+  --line-strong: #b7c2b4;
+  --muted: #71817a;
+  --serif: "Noto Serif SC", "Songti SC", serif;
+  --sans: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --latin: "Cormorant Garamond", "Times New Roman", serif;
+  --mono: "DM Mono", "Microsoft YaHei", monospace;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  background: var(--paper);
+}
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.7;
+}
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(27, 59, 54, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(27, 59, 54, 0.025) 1px, transparent 1px);
+  background-size: 88px 88px;
+  content: "";
+  pointer-events: none;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(43, 102, 159, 0.35);
+  outline-offset: 3px;
+}
+.section-shell {
+  width: min(1180px, calc(100% - 72px));
+  margin: 0 auto;
+}

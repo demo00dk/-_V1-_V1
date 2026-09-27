@@ -1,0 +1,46 @@
+{
+  "name": "demo-korea-one-stop",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "start": "node --env-file-if-exists=.env server/index.mjs",
+    "check": "tsc -b",
+    "test:ui": "npm run build && playwright test",
+    "test:ui:report": "playwright show-report output/playwright/report",
+    "start:local": "node --env-file-if-exists=.env server/index.mjs --local",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify": "npm run format:check && npm run test:coverage && npm run test:ui",
+    "portfolio": "node scripts/export-portfolio.mjs"
+  },
+  "dependencies": {
+    "qrcode": "1.5.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.1.1",
+    "vite": "8.2.2",
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.63.0",
+    "@types/node": "26.5.0",
+    "@types/qrcode": "1.5.6",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "@vitest/coverage-v8": "5.0.2",
+    "prettier": "3.9.9",
+    "typescript": "5.9.3",
+    "vitest": "5.0.2"
+  },
+  "description": "A Korean study-abroad catalog, explainable school matcher and content management portfolio project.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "license": "UNLICENSED"
+}

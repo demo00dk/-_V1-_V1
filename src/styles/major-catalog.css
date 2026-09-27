@@ -1,0 +1,284 @@
+/* Major index — a restrained editorial directory, linked to the admin taxonomy. */
+.compact-school-card {
+  min-height: 250px;
+  padding: 25px 26px 27px;
+}
+.compact-school-card h2 {
+  margin-top: 30px;
+}
+.compact-school-card p {
+  min-height: 0;
+  margin: 0;
+  line-height: 1.85;
+}
+.compact-school-card:hover {
+  box-shadow: 5px 6px 0 rgba(215, 230, 216, 0.82);
+  transform: translateY(-3px);
+}
+.major-library-page .page-title {
+  margin-bottom: 38px;
+}
+.major-filter-bar {
+  grid-template-columns:
+    minmax(250px, 1.45fr) repeat(3, minmax(150px, 0.58fr))
+    auto;
+}
+.major-library-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(390px, 1.08fr);
+  align-items: start;
+  gap: 22px;
+  margin-top: 24px;
+}
+.major-catalog,
+.major-school-results {
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 253, 248, 0.86);
+}
+.catalog-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding: 15px 18px;
+  color: var(--white);
+  background: var(--blue-dark);
+}
+.catalog-heading span {
+  font: 800 17px var(--serif);
+}
+.catalog-heading small {
+  color: #bdd3c6;
+  font: 9px var(--mono);
+}
+.major-catalog {
+  max-height: 760px;
+  overflow: auto;
+}
+.major-catalog .pagination {
+  padding: 12px 16px;
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+  gap: 8px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+.major-catalog .pagination .button {
+  min-height: 32px;
+  padding: 5px 10px;
+  font-size: 11px;
+}
+.major-catalog > button {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 34px minmax(0, 1fr) 70px;
+  align-items: center;
+  gap: 11px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 17px;
+  color: var(--ink);
+  background: transparent;
+  text-align: left;
+  transition:
+    background 0.16s ease,
+    padding-left 0.16s ease;
+}
+.major-catalog > button:hover {
+  padding-left: 21px;
+  background: var(--sky-2);
+}
+.major-catalog > button.active {
+  color: var(--white);
+  background: var(--blue-dark);
+}
+.major-catalog > button > span {
+  align-self: start;
+  padding-top: 3px;
+  color: var(--red);
+  font: 10px var(--mono);
+}
+.major-catalog > button.active > span {
+  color: #efbd73;
+}
+.major-catalog > button > div {
+  min-width: 0;
+}
+.major-catalog > button b {
+  display: block;
+  overflow: hidden;
+  font: 800 16px/1.45 var(--serif);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.major-catalog > button div > small {
+  display: block;
+  overflow: hidden;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.major-catalog > button.active div > small {
+  color: #c8dcd2;
+}
+.major-catalog > button div > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 7px;
+}
+.major-catalog > button i {
+  border: 1px solid #d7dfd8;
+  padding: 2px 5px;
+  color: #5d7168;
+  background: #f6f8f3;
+  font-size: 8px;
+  font-style: normal;
+}
+.major-catalog > button.active i {
+  border-color: rgba(255, 255, 255, 0.24);
+  color: #e5eee8;
+  background: rgba(255, 255, 255, 0.08);
+}
+.major-catalog > button > strong {
+  color: var(--red);
+  font: 700 28px/1 var(--latin);
+  text-align: right;
+}
+.major-catalog > button > strong small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font: 8px var(--sans);
+}
+.major-catalog > button.active > strong small {
+  color: #bdd3c6;
+}
+.major-catalog > button.active > strong {
+  color: #f4d8b0;
+}
+.major-school-results {
+  position: sticky;
+  top: 102px;
+  max-height: calc(100vh - 125px);
+  overflow: auto;
+}
+.major-school-results > header {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  padding: 27px 28px 24px;
+  background: var(--sky-2);
+}
+.major-school-results > header::after {
+  position: absolute;
+  top: -29px;
+  right: -5px;
+  color: rgba(27, 59, 54, 0.06);
+  content: "M";
+  font: 700 150px/1 var(--latin);
+}
+.major-school-results > header > * {
+  position: relative;
+  z-index: 1;
+}
+.major-school-results > header > span {
+  color: var(--red);
+  font: 9px var(--mono);
+  letter-spacing: 0.12em;
+}
+.major-school-results h2 {
+  margin: 7px 0 6px;
+  color: var(--ink);
+  font: 900 30px/1.3 var(--serif);
+}
+.major-school-results header p {
+  max-width: 80%;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 11px;
+  line-height: 1.65;
+}
+.major-school-results header > div {
+  position: absolute;
+  top: 27px;
+  right: 26px;
+  display: grid;
+  justify-items: end;
+}
+.major-school-results header > div b {
+  color: var(--blue-dark);
+  font: 700 35px/1 var(--latin);
+}
+.major-school-results header > div small {
+  color: var(--muted);
+  font-size: 8px;
+}
+.major-school-list-public {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 10px;
+}
+.major-school-list-public article {
+  border: 1px solid var(--line);
+  padding: 15px;
+  background: #fff;
+}
+.major-school-list-public article > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 7px;
+  color: var(--muted);
+  font: 8px var(--mono);
+}
+.major-school-list-public article > div b {
+  color: var(--red);
+  font-weight: 500;
+}
+.major-school-list-public h3 {
+  margin: 17px 0 8px;
+  color: var(--ink);
+  font: 900 18px/1.3 var(--serif);
+}
+.major-school-list-public h3 small {
+  display: block;
+  overflow: hidden;
+  margin-top: 3px;
+  color: var(--blue);
+  font: 8px var(--mono);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.major-school-list-public p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 9px;
+  line-height: 1.55;
+}
+.major-detail-empty {
+  display: grid;
+  min-height: 500px;
+  align-content: center;
+  justify-items: center;
+  padding: 50px;
+  text-align: center;
+}
+.major-detail-empty > span {
+  color: var(--red);
+  font: 9px var(--mono);
+  letter-spacing: 0.12em;
+}
+.major-detail-empty h2 {
+  margin: 11px 0 5px;
+}
+.major-detail-empty p {
+  max-width: 330px;
+  color: var(--muted);
+  font-size: 12px;
+}

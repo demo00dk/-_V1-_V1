@@ -1,0 +1,487 @@
+/* Public visa desk — an official-document inspired shareable checklist. */
+.resources-page {
+  padding-bottom: 90px;
+}
+.tool-grid .featured-tool {
+  position: relative;
+  overflow: hidden;
+  border-color: var(--blue-dark);
+  background: linear-gradient(145deg, #fffdf8 0 72%, #e4eee7 72%);
+}
+.tool-grid .featured-tool::after {
+  position: absolute;
+  right: 16px;
+  bottom: 5px;
+  color: rgba(23, 63, 56, 0.08);
+  content: "D-2";
+  font: 800 75px/1 var(--latin);
+  pointer-events: none;
+}
+.tool-grid .featured-tool > * {
+  position: relative;
+  z-index: 1;
+}
+.visa-tool {
+  scroll-margin-top: 92px;
+  overflow: hidden;
+  margin-top: 34px;
+  border: 1px solid var(--blue-dark);
+  border-radius: 3px 28px 3px 3px;
+  background: #e8e5db;
+  box-shadow: 10px 12px 0 rgba(45, 88, 76, 0.09);
+  animation: visa-reveal 0.35s ease both;
+}
+@keyframes visa-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.visa-tool-head {
+  display: flex;
+  min-height: 185px;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 35px 42px 31px;
+  color: #fffdf7;
+  background-color: var(--blue-dark);
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 29px 29px;
+}
+.visa-tool-head > div > span {
+  color: #eac96e;
+  font: 10px var(--mono);
+  letter-spacing: 0.16em;
+}
+.visa-tool-head h2 {
+  margin: 9px 0 7px;
+  color: #fffdf7;
+  font: 900 31px/1.25 var(--serif);
+}
+.visa-tool-head p {
+  max-width: 710px;
+  margin: 0;
+  color: #ccded5;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.visa-tool-head > strong {
+  flex: 0 0 auto;
+  color: #fffdf7;
+  font: 800 70px/1 var(--latin);
+  letter-spacing: -0.05em;
+}
+.visa-tool-head > strong small {
+  display: block;
+  margin-top: 4px;
+  color: #eac96e;
+  font: 19px var(--mono);
+  text-align: right;
+}
+.visa-degree-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid #b8c2b7;
+  background: #f3f0e6;
+}
+.visa-degree-tabs button {
+  display: grid;
+  min-height: 93px;
+  grid-template-columns: 31px 1fr auto;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  border-right: 1px solid #cfd4cb;
+  border-bottom: 5px solid transparent;
+  padding: 13px 19px 9px;
+  color: var(--ink);
+  background: transparent;
+  text-align: left;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+.visa-degree-tabs button:last-child {
+  border-right: 0;
+}
+.visa-degree-tabs button:hover {
+  background: #fffdf8;
+}
+.visa-degree-tabs button.active {
+  border-bottom-color: var(--red);
+  color: #fffdf8;
+  background: #315f54;
+}
+.visa-degree-tabs span {
+  color: var(--red);
+  font: 10px var(--mono);
+}
+.visa-degree-tabs button.active span {
+  color: #f0ca72;
+}
+.visa-degree-tabs b {
+  font: 900 18px var(--serif);
+}
+.visa-degree-tabs small {
+  color: var(--muted);
+  font: 10px var(--mono);
+}
+.visa-degree-tabs button.active small {
+  color: #d6e6dc;
+}
+.visa-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  align-items: start;
+  gap: 14px;
+  padding: 14px;
+}
+.visa-check-card {
+  overflow: hidden;
+  border: 1px solid #bbc4b9;
+  background: #fffdf8;
+}
+.visa-check-card > header {
+  display: flex;
+  min-height: 77px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+  padding: 13px 24px;
+  background: #edf2e9;
+}
+.visa-check-card > header > div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.visa-check-card > header span {
+  color: var(--red);
+  font: 800 33px/1 var(--latin);
+}
+.visa-check-card > header small {
+  color: var(--ink-soft);
+  font-size: 11px;
+}
+.visa-check-card > header > p {
+  margin: 0;
+  color: var(--muted);
+  font: 10px var(--mono);
+}
+.visa-card-title {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 26px 18px;
+}
+.visa-card-title > span {
+  display: grid;
+  width: 65px;
+  height: 65px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fffdf8;
+  background: var(--blue-dark);
+  font: 900 16px var(--serif);
+  box-shadow: 6px 6px 0 #eadcae;
+}
+.visa-card-title h3 {
+  margin: 0 0 4px;
+  color: var(--ink);
+  font: 900 25px var(--serif);
+}
+.visa-card-title p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 11px;
+  line-height: 1.65;
+}
+.visa-check-card > ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  padding: 0 26px 12px;
+  list-style: none;
+}
+.visa-check-card > ol li {
+  display: grid;
+  min-height: 64px;
+  grid-template-columns: 38px 1fr;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+  padding: 10px 15px 10px 0;
+}
+.visa-check-card > ol li:nth-child(odd) {
+  margin-right: 16px;
+}
+.visa-check-card > ol li > span {
+  color: var(--red);
+  font: 700 11px var(--mono);
+}
+.visa-check-card > ol li > p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.55;
+}
+.visa-check-card > aside {
+  margin: 6px 26px 20px;
+  border-left: 4px solid var(--gold);
+  padding: 13px 17px;
+  background: #f5ecd8;
+}
+.visa-check-card > aside b {
+  display: block;
+  margin-bottom: 6px;
+  color: #8b4439;
+  font: 900 13px var(--serif);
+}
+.visa-check-card > aside p {
+  margin: 4px 0;
+  color: #685e4d;
+  font-size: 10px;
+  line-height: 1.6;
+}
+.visa-check-card > footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid var(--line);
+  padding: 12px 26px;
+  color: var(--blue-dark);
+  background: #f0f4ec;
+  font-size: 9px;
+}
+.visa-check-card > footer small {
+  color: var(--muted);
+}
+.visa-share-panel {
+  position: sticky;
+  top: 96px;
+  border: 1px solid var(--blue-dark);
+  border-radius: 18px 18px 3px 3px;
+  padding: 25px 23px 20px;
+  background: #fffdf8;
+  box-shadow: 5px 6px 0 rgba(185, 154, 85, 0.25);
+}
+.visa-share-panel h3 {
+  margin: 7px 0 10px;
+  color: var(--ink);
+  font: 900 23px/1.35 var(--serif);
+}
+.visa-share-panel > p {
+  margin: 0 0 18px;
+  color: var(--ink-soft);
+  font-size: 11px;
+  line-height: 1.75;
+}
+.visa-share-panel > .button {
+  margin-top: 8px;
+}
+.visa-share-status {
+  border-left: 3px solid var(--red);
+  margin: 14px 0 0 !important;
+  padding: 9px 10px;
+  color: var(--ink) !important;
+  background: #f8eee7;
+  font-size: 10px !important;
+}
+.visa-source {
+  margin-top: 22px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.visa-source b {
+  color: var(--blue-dark);
+  font: 900 13px var(--serif);
+}
+.visa-source p {
+  margin: 6px 0 9px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.65;
+}
+.visa-source a {
+  color: var(--red);
+  font-size: 10px;
+  text-decoration: none;
+}
+.visa-source a:hover {
+  text-decoration: underline;
+}
+.visa-guide-editor {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  margin: 13px 0 31px;
+}
+.visa-guide-editor > article {
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: #fffdf8;
+}
+.visa-guide-editor > article > header {
+  display: grid;
+  grid-template-columns: 1fr auto 58px;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 15px;
+  color: #fff;
+  background: var(--blue-dark);
+}
+.visa-guide-editor header b {
+  font: 900 17px var(--serif);
+}
+.visa-guide-editor header span {
+  color: #efca72;
+  font: 11px var(--mono);
+}
+.visa-guide-editor header input {
+  width: 58px;
+  min-height: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 3px;
+  color: #fff;
+  background: transparent;
+  text-align: center;
+}
+.visa-guide-editor > article > div {
+  padding: 14px;
+}
+.visa-guide-editor .form-field {
+  margin-bottom: 10px;
+}
+.visa-guide-editor textarea {
+  line-height: 1.6;
+}
+@media (max-width: 1000px) {
+  .visa-workspace {
+    grid-template-columns: 1fr;
+  }
+  .visa-share-panel {
+    position: static;
+  }
+  .visa-guide-editor {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px) {
+  .visa-tool-head {
+    min-height: 0;
+    align-items: start;
+    padding: 27px 22px;
+  }
+  .visa-tool-head > strong {
+    display: none;
+  }
+  .visa-degree-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .visa-degree-tabs button {
+    min-height: 72px;
+    padding: 9px 12px 6px;
+  }
+  .visa-workspace {
+    padding: 7px;
+  }
+  .visa-check-card > ol {
+    grid-template-columns: 1fr;
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+  .visa-check-card > ol li:nth-child(odd) {
+    margin-right: 0;
+  }
+  .visa-card-title {
+    grid-template-columns: 54px 1fr;
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+  .visa-card-title > span {
+    width: 50px;
+    height: 50px;
+  }
+  .visa-check-card > aside {
+    margin-right: 17px;
+    margin-left: 17px;
+  }
+  .visa-check-card > footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .visa-share-panel {
+    border-radius: 13px 13px 3px 3px;
+  }
+}
+.visa-bachelor-tabs {
+  display: grid;
+  grid-template-columns: 150px repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1px;
+  border-bottom: 1px solid #b8c2b7;
+  padding: 11px 14px;
+  background: #dfe5dc;
+}
+.visa-bachelor-tabs > span {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  color: var(--blue-dark);
+  font: 800 12px var(--serif);
+}
+.visa-bachelor-tabs button {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: 1px solid #b8c2b7;
+  padding: 8px 12px;
+  color: var(--ink);
+  background: #fffdf8;
+  font: 800 12px var(--serif);
+  text-align: left;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+.visa-bachelor-tabs button:hover {
+  border-color: var(--blue-dark);
+  transform: translateY(-1px);
+}
+.visa-bachelor-tabs button.active {
+  border-color: var(--red);
+  color: #fffdf8;
+  background: var(--red);
+}
+.visa-bachelor-tabs button small {
+  color: var(--muted);
+  font: 9px var(--mono);
+  white-space: nowrap;
+}
+.visa-bachelor-tabs button.active small {
+  color: #ffe0d6;
+}
+@media (max-width: 820px) {
+  .visa-bachelor-tabs {
+    grid-template-columns: 1fr;
+  }
+  .visa-bachelor-tabs > span {
+    padding: 3px 2px 6px;
+  }
+  .visa-bachelor-tabs button {
+    min-height: 44px;
+  }
+}
